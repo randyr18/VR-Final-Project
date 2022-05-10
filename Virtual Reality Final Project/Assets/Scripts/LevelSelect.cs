@@ -6,4 +6,10 @@ public class LevelSelect: MonoBehaviour {
     public void Level1Press() {  
         SceneManager.LoadScene("Level1");  
     }
+    public void Level2Press() {  
+        SceneManager.LoadScene("NightScene");  
+    }
+    public void Level3Press() {  
+        SceneManager.LoadScene("ThirdScene");  
+    }
 } 
