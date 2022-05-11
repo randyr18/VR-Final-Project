@@ -5,17 +5,35 @@ using UnityEngine;
 public class Destruct_Targets : MonoBehaviour
 {
     // Start is called before the first frame 
+    public float blastRadius = 2;
+    public float explosionForce = 1000;
     public AudioClip hitSound;
-    void Start()
-    {
-        //GetComponent<AudioSource>().playOnAwake = false;
-        //GetComponent<AudioSource>().clip = hitSound;
-    }
+    public GameObject particle;
+    bool hasExploded = false;
 
+    
     private void OnCollisionEnter(Collision collision)
     {
-        //GetComponent<AudioSource>().Play();
+        if (!hasExploded)
+        {
+            Explode();
+            hasExploded = true;
+        }
+    }
+    public void Explode()
+    {
+        GameObject effect = Instantiate(particle, transform.position, transform.rotation);
+        Collider[] nearbyObjects = Physics.OverlapSphere(transform.position, blastRadius);
+        foreach (Collider nearbyObject in nearbyObjects)
+        {
+            Rigidbody rb = nearbyObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddExplosionForce(explosionForce, transform.position, blastRadius);
+            }
+        }
         Destroy(gameObject);
-        
+        // Destroy effect after it does its job if I don't destory particle keeps playing
+        Destroy(effect, 0.5f);
     }
 }
