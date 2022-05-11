@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -717,7 +717,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 5681a1a039411094888b8ac7026cde49, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1 &670367449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1041,7 +1044,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1001 &1071535539
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1194,7 +1200,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1 &1167051148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7217828390678641911, guid: 252e3c6ed32b1b74889f90eb13b4ee31, type: 3}
@@ -1258,7 +1267,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1 &1177796934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7977819192417808284, guid: 252e3c6ed32b1b74889f90eb13b4ee31, type: 3}
@@ -1309,7 +1321,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1 &1343607176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1393,7 +1408,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 3a36a29a21348b7438f786de2ba94837, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1555,7 +1570,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!1 &1992090085 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4898841953366944908, guid: 252e3c6ed32b1b74889f90eb13b4ee31, type: 3}
@@ -1599,7 +1617,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54868bfd72d53c94da3498930a5599bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blastRadius: 2
+  explosionForce: 1000
   hitSound: {fileID: 8300000, guid: 51ed7bb919ca7b942a5625fb8b0cf705, type: 3}
+  particle: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!4 &2108686748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5126527961139664760, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
