@@ -10,16 +10,21 @@ public class Destruct_Targets : MonoBehaviour
     public AudioClip hitSound;
     public GameObject particle;
     bool hasExploded = false;
-
-    
+    private Launch _launch;
+    private void Start()
+    {
+        _launch = GameObject.Find("Arrow Spawn Point").GetComponent<Launch>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (!hasExploded)
         {
             Explode();
             hasExploded = true;
+            _launch.AddScore(10);
         }
     }
+    
     public void Explode()
     {
         GameObject effect = Instantiate(particle, transform.position, transform.rotation);

@@ -14,12 +14,17 @@ public class Launch : MonoBehaviour
     private float currentPullDuration = 0f;
     private float maxPullTime = 3f;
     private GameObject temp;
+    private int _score;
     void Start()
     {
         Debug.Log(arrow);
         temp = transform.Find("arrow").gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+    public void AddScore(int points)
+    {
+        _score += points;
     }
 
     // Update is called once per frame
