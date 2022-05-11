@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Launch : MonoBehaviour
 {
@@ -17,12 +18,18 @@ public class Launch : MonoBehaviour
     {
         Debug.Log(arrow);
         temp = transform.Find("arrow").gameObject;
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // to return to the main menu we press escape
+        if (Input.GetKeyDown (KeyCode.Escape)){
+            SceneManager.LoadScene("MainMenu");
+            }
+
         if (Input.GetMouseButtonDown(0) && mouseReleased) // left click
         {
             currentPullDuration = 0f;
