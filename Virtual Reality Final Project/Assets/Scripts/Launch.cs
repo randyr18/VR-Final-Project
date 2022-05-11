@@ -15,16 +15,19 @@ public class Launch : MonoBehaviour
     private float maxPullTime = 3f;
     private GameObject temp;
     private int _score;
+    private UIManager _UIManager;
     void Start()
     {
         Debug.Log(arrow);
         temp = transform.Find("arrow").gameObject;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        _UIManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
     public void AddScore(int points)
     {
         _score += points;
+        _UIManager.updateScore(_score);
     }
 
     // Update is called once per frame
